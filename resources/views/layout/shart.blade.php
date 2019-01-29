@@ -1,5 +1,6 @@
-{{--@extends('layout.nav')--}}
-        <!doctype html>
+@extends('layout.nav')
+@section('content')
+<!doctype html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -15,11 +16,37 @@
     <title>Ephaphatha</title>
 </head>
 <body>
-<div class = "container">
+<div class = "container ">
     <div class="blog-post col-sm-8">
-        <h1 class="blog-post-title text-primary text-center"> {{$uid->title}}  </h1>
-        <p class="blog-meta">updated last at.{{$uid->updated_at->toFormattedDateString()}} <b>    </b></p>
-        <h6>   {{$uid->post}}  </h6>
-        <p><a href="#"><sup>got a comment?</sup></a></p>
+        <h1 class="blog-post-title text-primary text-left "> {{$uid->title}}  </h1>
+        <p class="blog-meta"><b><i>updated last at.{{$uid->updated_at->toFormattedDateString()}}     </i></b></p>
+        <h6 class="col-sm-8">   {{$uid->post}}  </h6>
     </div>
+   
+    <div class="form-group">
+        <form class="form-group col-sm-6" method="POST" action="/{{$uid->id}}/comment">
+            {{csrf_field()}}
+            <textarea placeholder="Write your comment here!" name="comment" class="form-control  mt-4 "></textarea>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+
+    <div class="col-sm-6">
+        <ul class="list-group">
+            @foreach($uid->comments as $comment)
+                <li class="card list-group-item-success">
+                    {{$comment->comments}}
+                    <strong>
+                        <span class="date sub-text">{{$comment->updated_at->diffForHumans()}}</span>
+                    </strong>
+
+                </li><br>
+            @endforeach
+        </ul>
+    </div>
+
 </div>
+
+</body>
+</html>
+@endsection
