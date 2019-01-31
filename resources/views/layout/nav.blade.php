@@ -20,30 +20,30 @@
 
 ?>
 
-<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+<nav class="navbar py-0 navbar-expand-sm bg-dark navbar-dark">
     {{--brand--}}
-    <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
-        <h3><a class="navbar-brand" href="#">kings Blog</a></h3>
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark py-0">
+        <h4><a class="navbar-brand" href="#">kings Blog</a></h4>
     </nav>
     <!-- Links -->
-    <ul class="navbar-nav">
-        <li class="nav-item">
-            <h4><a class="nav-link {{'$active'}}" href="{{'/'}}">Home</a></h4>
+    <ul class="navbar-nav py-0">
+        <li class="nav-item py-0">
+            <h4><a class="nav-link font-weight-normal {{'$active'}}" href="{{'/'}}">Home</a></h4>
         </li>
         {{--spacing--}}
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <li class="nav-item">
-            <h4><a class="nav-link {{'$active'}}" href="#">Press</a></h4>
+        <li class="nav-item py-0">
+            <h4><a class="nav-link font-weight-normal {{'$active'}}" href="#">Press</a></h4>
         </li>
         {{--spacing--}}
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <li class="nav-item">
-            <h4><a class="nav-link {{'$active'}}" href="#">New Features</a></h4>
+        <li class="nav-item py-0">
+            <h4><a class="nav-link font-weight-normal {{'$active'}}" href="#">New Features</a></h4>
         </li>
         {{--spacing--}}
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <li class="nav-item">
-            <h4><a class="nav-link {{'$active'}}" href="#">New Hires</a></h4>
+        <li class="nav-item py-0">
+            <h4><a class="nav-link font-weight-normal {{'$active'}}" href="#">New Hires</a></h4>
         </li>
     </ul>
     <div class="dropdown">
